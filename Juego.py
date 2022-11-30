@@ -404,13 +404,13 @@ def Juego():
 
 
         Elemento=py.Rect(1320+VelF,445,320,5)
-        personaje.colimorir(Elemento,jugador,[56,120],ValidadorPos,nv)
+        personaje.colimorir(Elemento,jugador,[jugador.x-20,120],ValidadorPos,nv)
 
         Elemento=py.Rect(2840+VelF,445,570,5)
-        personaje.colimorir(Elemento,jugador,[56,120],ValidadorPos,nv)
+        personaje.colimorir(Elemento,jugador,[jugador.x-20,120],ValidadorPos,nv)
         
         Elemento=py.Rect(3797+VelF,445,1000,5)
-        personaje.colimorir(Elemento,jugador,[56,120],ValidadorPos,nv)
+        personaje.colimorir(Elemento,jugador,[jugador.x-20,120],ValidadorPos,nv)
 
         ''' Se valida las caidas de las escaleras o bloques , asignando así el incremento en Y
             Para un mejor efecto de gravedad'''
