@@ -80,9 +80,9 @@ def Juego():
     # Musica de fondo
     py.mixer.init()
     Sonido= py.mixer.Sound("Musica\Musica.mp3")
-    Sonido.set_volume(0.9)
+    Sonido.set_volume(0.3)
     Sonido.play() 
-    Tiempo=0
+    
     while Iniciar:
         #Se inicia el juego
         Tiempo= py.time.get_ticks()/60000
@@ -92,6 +92,7 @@ def Juego():
             VentanaJ.Poner(Gameover,(325,150))
             py.display.flip()
             sleep(2)
+            py.quit()
             Iniciar=False
             return 1
         Vida=py.image.load("flatboy\Vidas"+f"\{nv}"+"vidas.png")
@@ -99,6 +100,7 @@ def Juego():
             if event.type == py.QUIT:
                 Iniciar=False
                 Sonido.stop()
+                py.quit()
                 return 1
             if event.type == py.KEYDOWN:
                 #Se espera que el usuario presione una tecla para así realizar los movimientos
@@ -364,6 +366,7 @@ def Juego():
             py.display.flip()
             sleep(2)
             Iniciar=False
+            py.quit()
             return 1
             
         '''Condicional cae vida'''

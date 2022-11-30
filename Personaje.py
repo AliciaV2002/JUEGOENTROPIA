@@ -183,9 +183,16 @@ class Sprites():
         
         if Jugador.colliderect(Objeto) :
             if self.VelX > 0 and self.CoorY + 85 > Objeto.y:
-                self.CoorX -= 35
+                if self.CoorX< Objeto.x:
+                    self.CoorX-=35
+                elif self.CoorX>Objeto.x:
+                    self.CoorX+=35
+    
             if self.VelX <0 and self.CoorY + 85 > Objeto.y:
-                self.CoorX += 35
+                if self.CoorX< Objeto.x:
+                    self.CoorX-=35
+                elif self.CoorX>Objeto.x:
+                    self.CoorX+=35
             if self.VelY>=0 and self.CoorY + 75 <= Objeto.y :
                 self.VelY=0
                 self.Ocolision = Objeto
